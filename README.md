@@ -1,6 +1,6 @@
 # Awesome-Metrics-Store-Platform
 
-# Top Merchandising Software Ecosystem
+## Top Merchandising Software Ecosystem
 **Curated List of SaaS Products & Open-Source GitHub Projects**
 *Focused on Assortment Planning, Merchandise Lifecycle Management, Allocation, Pricing, Inventory Optimization & Retail Category Management*
 **Last updated: August 2026**
