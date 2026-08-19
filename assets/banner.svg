@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#080b12" />
+    </linearGradient>
+
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="cyan-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.08)" />
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow-purple" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-cyan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-8px) rotate(2deg); }
+      }
+      @keyframes floatFast {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-12px) rotate(-3deg); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.65; transform: scale(1.08); }
+      }
+      @keyframes beamFlow {
+        0% { stroke-dashoffset: 100; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .floating-node-1 { animation: floatSlow 6s ease-in-out infinite; }
+      .floating-node-2 { animation: floatFast 5s ease-in-out infinite 1s; }
+      .floating-node-3 { animation: floatSlow 7s ease-in-out infinite 2s; }
+      .pulse-glow-circle { animation: pulseGlow 4s ease-in-out infinite; transform-origin: center; }
+      .data-stream { stroke-dasharray: 6, 6; animation: beamFlow 20s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" rx="16" fill="url(#bg-grad)" />
+
+  <!-- Subtle Matrix / Grid Pattern -->
+  <g opacity="0.12" stroke="#6366f1" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="120" y1="0" x2="120" y2="360" />
+    <line x1="240" y1="0" x2="240" y2="360" />
+    <line x1="360" y1="0" x2="360" y2="360" />
+    <line x1="480" y1="0" x2="480" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="720" y1="0" x2="720" y2="360" />
+    <line x1="840" y1="0" x2="840" y2="360" />
+    <line x1="960" y1="0" x2="960" y2="360" />
+    <line x1="1080" y1="0" x2="1080" y2="360" />
+  </g>
+
+  <!-- Glowing background ambient orbs -->
+  <circle cx="200" cy="180" r="140" fill="#6366f1" opacity="0.25" filter="url(#glow-purple)" class="pulse-glow-circle" />
+  <circle cx="1020" cy="180" r="130" fill="#ec4899" opacity="0.22" filter="url(#glow-purple)" class="pulse-glow-circle" style="animation-delay: 2s;" />
+  <circle cx="600" cy="90" r="110" fill="#06b6d4" opacity="0.18" filter="url(#glow-cyan)" class="pulse-glow-circle" style="animation-delay: 1s;" />
+
+  <!-- Animated Connecting Data Beams -->
+  <path d="M 850 180 Q 950 120 1060 140" stroke="url(#accent-grad)" stroke-width="2" fill="none" opacity="0.6" class="data-stream" />
+  <path d="M 850 180 Q 960 250 1060 220" stroke="url(#cyan-grad)" stroke-width="2" fill="none" opacity="0.6" class="data-stream" />
+  <path d="M 140 140 Q 220 180 320 180" stroke="url(#cyan-grad)" stroke-width="2" fill="none" opacity="0.5" class="data-stream" />
+  <path d="M 140 220 Q 220 180 320 180" stroke="url(#accent-grad)" stroke-width="2" fill="none" opacity="0.5" class="data-stream" />
+
+  <!-- Left Side Interactive Semantic Nodes -->
+  <g class="floating-node-1">
+    <rect x="70" y="90" width="130" height="48" rx="8" fill="url(#card-grad)" stroke="rgba(99, 102, 241, 0.4)" stroke-width="1.5" />
+    <circle cx="92" cy="114" r="6" fill="#6366f1" />
+    <text x="108" y="118" fill="#e0e7ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">SQL Models</text>
+  </g>
+
+  <g class="floating-node-2">
+    <rect x="60" y="200" width="140" height="48" rx="8" fill="url(#card-grad)" stroke="rgba(6, 182, 212, 0.4)" stroke-width="1.5" />
+    <circle cx="82" cy="224" r="6" fill="#06b6d4" />
+    <text x="98" y="228" fill="#cffafe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">Metric YAML</text>
+  </g>
+
+  <!-- Right Side Interactive Consumption Nodes -->
+  <g class="floating-node-3">
+    <rect x="990" y="100" width="140" height="48" rx="8" fill="url(#card-grad)" stroke="rgba(236, 72, 153, 0.4)" stroke-width="1.5" />
+    <circle cx="1012" cy="124" r="6" fill="#ec4899" />
+    <text x="1028" y="128" fill="#fce7f3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">BI &amp; Apps</text>
+  </g>
+
+  <g class="floating-node-1">
+    <rect x="990" y="205" width="140" height="48" rx="8" fill="url(#card-grad)" stroke="rgba(139, 92, 246, 0.4)" stroke-width="1.5" />
+    <circle cx="1012" cy="229" r="6" fill="#8b5cf6" />
+    <text x="1028" y="233" fill="#ede9fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">AI Agents</text>
+  </g>
+
+  <!-- Central Hero Card / Semantic Core -->
+  <g>
+    <!-- Outer Glow Rim -->
+    <rect x="250" y="45" width="700" height="270" rx="16" fill="url(#card-grad)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5" />
+    
+    <!-- Top Pill Tag -->
+    <rect x="475" y="70" width="250" height="28" rx="14" fill="rgba(99, 102, 241, 0.15)" stroke="rgba(99, 102, 241, 0.4)" stroke-width="1" />
+    <text x="600" y="89" text-anchor="middle" fill="#a5b4fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">⚡ SEMANTIC LAYER &amp; METRICS</text>
+
+    <!-- Main Title -->
+    <text x="600" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif" font-size="38" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+      Awesome Metrics Store
+    </text>
+
+    <!-- Gradient Subtitle -->
+    <text x="600" y="185" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif" font-size="19" font-weight="600" fill="url(#accent-grad)">
+      Governed Metrics • Headless BI • Single Source of Truth
+    </text>
+
+    <!-- Description -->
+    <text x="600" y="222" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9ca3af">
+      Curated catalog of SaaS platforms and Open-Source semantic layers
+    </text>
+
+    <!-- Tech Badges inside Banner -->
+    <g transform="translate(360, 252)">
+      <!-- Badge 1 -->
+      <rect x="0" y="0" width="105" height="26" rx="6" fill="rgba(99, 102, 241, 0.2)" stroke="rgba(99, 102, 241, 0.4)" stroke-width="1"/>
+      <text x="52" y="17" text-anchor="middle" fill="#c7d2fe" font-family="sans-serif" font-size="11" font-weight="600">Cube / dbt</text>
+
+      <!-- Badge 2 -->
+      <rect x="120" y="0" width="115" height="26" rx="6" fill="rgba(6, 182, 212, 0.2)" stroke="rgba(6, 182, 212, 0.4)" stroke-width="1"/>
+      <text x="177" y="17" text-anchor="middle" fill="#a5f3fc" font-family="sans-serif" font-size="11" font-weight="600">MetricFlow</text>
+
+      <!-- Badge 3 -->
+      <rect x="250" y="0" width="105" height="26" rx="6" fill="rgba(236, 72, 153, 0.2)" stroke="rgba(236, 72, 153, 0.4)" stroke-width="1"/>
+      <text x="302" y="17" text-anchor="middle" fill="#fbcfe8" font-family="sans-serif" font-size="11" font-weight="600">Lightdash</text>
+
+      <!-- Badge 4 -->
+      <rect x="370" y="0" width="110" height="26" rx="6" fill="rgba(16, 185, 129, 0.2)" stroke="rgba(16, 185, 129, 0.4)" stroke-width="1"/>
+      <text x="425" y="17" text-anchor="middle" fill="#a7f3d0" font-family="sans-serif" font-size="11" font-weight="600">DuckDB / SQL</text>
+    </g>
+  </g>
+</svg>
