@@ -20,35 +20,19 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 - [Disclaimer](#disclaimer)
 
 ## SaaS/Hosted Platforms
-- **[Transform](https://transform.co/)**  
-  Metrics store platform (acquired/influenced by the broader dbt ecosystem) focused on governed, reusable business metrics.
 
-- **[Cube Cloud](https://cube.dev/)**  
-  Managed service of the open-source Cube semantic layer, providing caching, APIs, and embedded analytics on top of a headless metrics store.
-
-- **[dbt Semantic Layer](https://www.getdbt.com/)**  
-  Cloud-hosted semantic layer powered by MetricFlow that lets teams define metrics inside dbt projects and query them consistently across tools.
-
-- **[Omni](https://omni.co/)**  
-  Modern analytics platform with strong semantic modeling and self-serve exploration capabilities.
-
-- **[MetricFlow (via dbt)](https://docs.getdbt.com/)**  
-  The query engine and metric definition framework that powers the dbt Semantic Layer (also available as open source).
-
-- **[Lightdash Cloud](https://www.lightdash.com/)**  
-  Managed offering of the open-source Lightdash platform, providing governed BI and metrics exploration on top of dbt projects.
-
-- **[GoodData](https://www.gooddata.com/)**  
-  Analytics and semantic-layer platform focused on governed metrics, embedding, and multi-tenant analytics.
-
-- **[Looker (Google Cloud)](https://cloud.google.com/looker)**  
-  Established BI platform with LookML as its powerful semantic modeling language and governed metrics layer.
-
-- **[Hex](https://hex.tech/)**  
-  Collaborative data workspace that integrates with semantic layers and supports governed metric consumption alongside notebooks and apps.
-
-- **[AtScale](https://www.atscale.com/)**  
-  Enterprise semantic layer and virtual OLAP platform that provides consistent metrics and high-performance query acceleration across BI tools.
+| Product | Description | Pricing | Free Tier Limits |
+| :--- | :--- | :--- | :--- |
+| **[Transform](https://transform.co/)** | Original pioneer metrics store platform; acquired by dbt Labs and integrated into dbt Semantic Layer / MetricFlow. | Standalone product retired; accessible via dbt Cloud starting at $100/developer seat/month | N/A (Integrated into dbt Cloud; offers 14-day dbt Cloud trial or dbt Cloud Developer free tier with 1 seat & 3,000 models/mo) |
+| **[Cube Cloud](https://cube.dev/)** | Managed service for the Cube semantic layer, providing caching, pre-aggregations, APIs (SQL/REST/GraphQL), and embedded analytics. | Consumption-based starting at ~$0.10 / Cube Consumption Unit (CCU) (no fixed monthly minimum) | Free forever plan: Up to 2 shared deployments for dev/testing (no credit card required) |
+| **[dbt Semantic Layer](https://www.getdbt.com/)** | Cloud-hosted semantic layer powered by MetricFlow to define governed metrics in dbt and query across BI tools. | Starts at $100/developer seat/month (Starter tier; full semantic integrations on Enterprise tier) | 14-day free trial of Team/Enterprise features; Free Developer tier includes 1 seat & 3,000 models/mo (Semantic Layer requires paid tier) |
+| **[Omni](https://omni.co/)** | Modern analytics and BI platform with a built-in semantic modeling layer and point-and-click data exploration. | Sales-led starting from ~$1,000/month for small team deployments (custom quote based on user seats and scope) | 14-day customized free evaluation trial (available upon sales request/demo) |
+| **[MetricFlow (via dbt Cloud)](https://docs.getdbt.com/)** | Governed metric definition framework and SQL compilation engine powering the dbt Semantic Layer. | Included with dbt Cloud Starter at $100/developer seat/month (Enterprise custom for advanced features) | Core engine is 100% free open-source (Apache 2.0); Cloud Semantic Layer includes 14-day free trial on dbt Cloud |
+| **[Lightdash Cloud](https://www.lightdash.com/)** | Managed BI and metrics exploration platform native to dbt projects with AI data analyst capabilities. | Cloud Starter starts at $800/month (unlimited users); Cloud Pro starts at $2,400/month | 21-day free trial (no credit card required; core platform is free self-hosted open-source) |
+| **[GoodData](https://www.gooddata.com/)** | Composable data analytics and semantic layer platform tailored for governed metrics and multi-tenant embedded analytics. | Platform fee starting at ~$1,500/month based on workspaces and data scale (custom quote) | 30-day full-featured free trial (no credit card required) |
+| **[Looker (Google Cloud)](https://cloud.google.com/looker)** | Enterprise BI platform featuring LookML as its centralized semantic modeling language and governed metrics store. | Custom enterprise annual contracts starting at ~$3,000–$5,000/month (~$36,000–$60,000/year for Standard Edition) | 30-day free proof-of-concept / evaluation trial via Google Cloud sales |
+| **[Hex](https://hex.tech/)** | Collaborative workspace combining notebooks, SQL, metrics layer integrations, and interactive app builder. | Professional plan starts at $36/editor/month (Team plan at $75/editor/month; free viewer seats) | Free forever Community plan: 1 editor, up to 5 projects, small compute profiles (4GB RAM, 0.5 CPU), 100 AI actions/month |
+| **[AtScale](https://www.atscale.com/)** | Universal semantic layer and virtual OLAP platform optimizing governed metrics across data warehouses and BI tools. | Object-based consumption model starting at ~$2,500/month based on Deployed Semantic Objects (DSOs) | Free Developer Community Edition for building/testing semantic models; 30-day guided enterprise free trial upon request |
 
 ## Open-Source GitHub Projects
 - **[Cube (Cube Core)](https://github.com/cube-js/cube)**  
