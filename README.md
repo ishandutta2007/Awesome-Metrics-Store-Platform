@@ -1,15 +1,15 @@
 # Awesome-Metrics-Store-Platform
 
-## Top Merchandising Software Ecosystem
+## Top Metrics Store Platforms Ecosystem
 **Curated List of SaaS Products & Open-Source GitHub Projects**
-*Focused on Assortment Planning, Merchandise Lifecycle Management, Allocation, Pricing, Inventory Optimization & Retail Category Management*
+*Focused on Semantic Layers, Governed Metrics, Consistent Business Logic, Headless BI, Metric APIs & Single Source of Truth for Analytics*
 **Last updated: August 2026**
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Retail Merchandising**. These systems support the full merchandise lifecycle — assortment planning, buying, allocation, pricing, inventory visibility, and performance analytics — helping retailers decide what to sell, where, and at what price.
+This repository tracks notable **SaaS platforms** and **open-source projects** for **Metrics Stores** (also called semantic layers or metrics layers). These systems centralize the definition of business metrics so that every dashboard, application, AI agent, and analyst queries the same trusted logic instead of recreating calculations in silos.
 
-**Examples** include Oracle Retail Merchandising, SAP Merchandise Management, Aptos Merchandising, Blue Yonder Merchandise, CGS BlueCherry, o9 Solutions, Invent Analytics, Manthan Retail, LS Central, and Retail Pro (the category leaders).
+**Examples** include Transform, Cube, dbt Semantic Layer, Omni, MetricFlow, Lightdash, GoodData, Looker, Hex, and AtScale (the category leaders).
 
-**Open-source emphasis**: This section is heavily expanded with every major active project for inventory management, product information management (PIM), assortment analytics, retail POS/stock control, and related planning tools — ideal for mid-market retailers, independent stores, and developers seeking transparent foundations instead of heavyweight enterprise suites.
+**Open-source emphasis**: This section is heavily expanded with every major active project. Several leading platforms (Cube, MetricFlow, Lightdash) offer strong open-source cores, making self-hosted, Git-versioned metrics layers practical for modern data teams.
 
 Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
 
@@ -20,75 +20,75 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 - [Disclaimer](#disclaimer)
 
 ## SaaS/Hosted Platforms
-- **[Oracle Retail Merchandising System (RMS)](https://www.oracle.com/retail/)**  
-  Enterprise merchandise management suite covering assortment, pricing, allocation, inventory, and the full retail merchandise lifecycle for large multi-channel retailers.
+- **[Transform](https://transform.co/)**  
+  Metrics store platform (acquired/influenced by the broader dbt ecosystem) focused on governed, reusable business metrics.
 
-- **[SAP Merchandise Management / SAP Retail](https://www.sap.com/)**  
-  Comprehensive retail merchandising capabilities within the SAP ecosystem, tightly integrated with S/4HANA for large and complex global retailers.
+- **[Cube Cloud](https://cube.dev/)**  
+  Managed service of the open-source Cube semantic layer, providing caching, APIs, and embedded analytics on top of a headless metrics store.
 
-- **[Aptos Merchandising](https://www.aptos.com/)**  
-  Retail merchandising and operations platform strong in specialty and fashion retail, supporting assortment, inventory, and omnichannel processes.
+- **[dbt Semantic Layer](https://www.getdbt.com/)**  
+  Cloud-hosted semantic layer powered by MetricFlow that lets teams define metrics inside dbt projects and query them consistently across tools.
 
-- **[Blue Yonder Merchandise / Planning](https://blueyonder.com/)**  
-  AI-powered retail planning and merchandise solutions focused on demand sensing, assortment, allocation, and replenishment.
+- **[Omni](https://omni.co/)**  
+  Modern analytics platform with strong semantic modeling and self-serve exploration capabilities.
 
-- **[CGS BlueCherry](https://www.cgscgs.com/)**  
-  Softgoods and apparel-oriented merchandising, PLM, and supply-chain platform used by fashion and lifestyle brands.
+- **[MetricFlow (via dbt)](https://docs.getdbt.com/)**  
+  The query engine and metric definition framework that powers the dbt Semantic Layer (also available as open source).
 
-- **[o9 Solutions](https://o9solutions.com/)**  
-  AI-driven integrated business planning platform that includes advanced retail and merchandise planning capabilities.
+- **[Lightdash Cloud](https://www.lightdash.com/)**  
+  Managed offering of the open-source Lightdash platform, providing governed BI and metrics exploration on top of dbt projects.
 
-- **[Invent Analytics](https://www.inventanalytics.com/)**  
-  AI-based retail analytics and optimization platform covering assortment, pricing, and inventory decisions.
+- **[GoodData](https://www.gooddata.com/)**  
+  Analytics and semantic-layer platform focused on governed metrics, embedding, and multi-tenant analytics.
 
-- **[Manthan Retail](https://www.manthan.com/)**  
-  Retail analytics and decision-support platform focused on merchandising insights, customer analytics, and performance management.
+- **[Looker (Google Cloud)](https://cloud.google.com/looker)**  
+  Established BI platform with LookML as its powerful semantic modeling language and governed metrics layer.
 
-- **[LS Central (LS Retail)](https://www.lsretail.com/)**  
-  All-in-one retail management solution (built on Microsoft Dynamics) covering merchandising, POS, inventory, and store operations.
+- **[Hex](https://hex.tech/)**  
+  Collaborative data workspace that integrates with semantic layers and supports governed metric consumption alongside notebooks and apps.
 
-- **[Retail Pro](https://www.retailpro.com/)**  
-  Established retail management and merchandising software used by specialty retailers for inventory, POS, and multi-store operations.
+- **[AtScale](https://www.atscale.com/)**  
+  Enterprise semantic layer and virtual OLAP platform that provides consistent metrics and high-performance query acceleration across BI tools.
 
 ## Open-Source GitHub Projects
-- **[InvenTree](https://github.com/inventree/InvenTree)**  
-  Powerful open-source inventory management system with part tracking, stock control, BOM support, and a plugin architecture suitable as a foundation for retail merchandising workflows.
+- **[Cube (Cube Core)](https://github.com/cube-js/cube)**  
+  Leading open-source semantic layer and headless BI platform with pre-aggregations, multi-API access (SQL, REST, GraphQL), and strong support for embedded analytics.
 
-- **[AtroPIM](https://github.com/atrocore/atropim)**  
-  Flexible, modular open-source Product Information Management (PIM) system for managing product data, attributes, and catalogs across channels.
+- **[MetricFlow](https://github.com/dbt-labs/metricflow)**  
+  Open-source metric definition and SQL compilation engine (Apache 2.0) that powers the dbt Semantic Layer and enables governed, reusable metrics in code.
 
-- **[ERPNext / Frappe Retail & Merchandise modules](https://frappe.io/erpnext)**  
-  Open-source ERP with strong inventory, POS, multi-warehouse, pricing, and merchandise management capabilities that can be extended for retail use cases.
+- **[Lightdash](https://github.com/lightdash/lightdash)**  
+  Open-source agentic BI platform that reads dbt project metadata, exposes governed metrics and dimensions, and supports dashboards, AI agents, and Git-based workflows.
 
-- **[OpenStock / OSPOS-related projects](https://github.com/)**  
-  Open-source stock control and retail management APIs and tools for inventory, purchase orders, and basic merchandising operations.
+- **[dbt Core + Semantic modeling](https://github.com/dbt-labs/dbt-core)**  
+  The foundational open-source transformation framework; when combined with MetricFlow it becomes a powerful metrics-as-code system.
 
-- **[Assortment Optimization research & ML heuristics](https://github.com/)**  
-  Academic and practical open-source projects implementing assortment optimization, substitution modeling, and stock-out-aware planning algorithms.
+- **[Apache Superset](https://github.com/apache/superset)**  
+  Open-source BI platform frequently paired with semantic layers; supports custom metrics and can consume governed definitions from Cube or similar tools.
 
-- **[Google Assortment Analytics (replicate_mango)](https://github.com/google-marketing-solutions/replicate_mango)**  
-  Open-source assortment analytics solution that leverages Merchant Center data to identify popularity, coverage gaps, and pricing opportunities.
+- **[Metabase](https://github.com/metabase/metabase)**  
+  Popular open-source BI tool that can sit on top of a metrics store or define simpler metrics directly.
 
-- **[IOE and similar retail inventory systems](https://github.com/)**  
-  Practical open-source Django (and other) systems covering product catalog, stock movements, sales, members, and store operations.
+- **[Malloy and other emerging semantic languages](https://github.com/)**  
+  Experimental and production open-source approaches to defining semantic models and metrics in a portable way.
 
-- **[Marzipan and grocery/retail POS projects](https://github.com/)**  
-  Open-source point-of-sale and stock management tools originally built for small retailers and co-ops.
+- **[Custom metrics layers on DuckDB / Arrow](https://github.com/)**  
+  Lightweight open-source projects that implement metric stores or semantic caching on modern analytical engines.
 
-- **[StoreMate and small-scale retail + CRM tools](https://github.com/)**  
-  Lightweight open-source retail management applications combining inventory, sales, and customer features.
+- **[Open Semantic Interchange (OSI) related work](https://github.com/)**  
+  Community and vendor efforts aimed at portable metric and semantic model formats across tools.
 
-- **[Smart SKU generators and attribute-based inventory tools](https://github.com/)**  
-  Utilities for structured SKU creation, category management, and attribute-driven product organization.
+- **[Headless BI examples and starters](https://github.com/)**  
+  Reference implementations showing how to expose Cube or MetricFlow metrics to applications, AI agents, and BI tools.
 
 ### Additional Strong Open-Source Options
-- Odoo Community (Inventory, POS, and e-commerce modules) as a flexible retail operations base.
-- Akeneo Community Edition and other open PIM alternatives for rich product data management.
-- Apache OFBiz and similar enterprise open-source frameworks with retail-oriented components.
-- Custom planning notebooks using Python (pandas, optimization libraries) for assortment and allocation scenarios.
-- Open BI stacks (Metabase, Superset) layered on retail transaction and inventory data for merchandising dashboards.
+- Evidence, Rill, and other code-first or embedded analytics tools that benefit from an upstream metrics layer.
+- SQLMesh and other transformation frameworks exploring semantic/metric capabilities.
+- Open catalog and governance tools that document and version metric definitions.
+- MCP / agent interfaces that expose governed metrics to AI coding and analysis agents.
+- Pre-aggregation and caching patterns implemented with open technologies (Redis, DuckDB, etc.).
 
-**Frameworks for building custom systems**: Use **InvenTree** or **ERPNext** for core inventory and stock control, **AtroPIM** (or similar) for rich product information, feed sales and inventory data into open analytics/optimization scripts for assortment and allocation decisions, and surface insights via open dashboards. For smaller operations, combine an open POS with a solid inventory backend. Extend with custom rules for pricing, seasonality, and multi-location allocation.
+**Frameworks for building custom systems**: Define metrics in **MetricFlow** YAML (inside a dbt project) or in **Cube** data models, serve them via Cube’s APIs or the dbt Semantic Layer interfaces, and consume them from **Lightdash**, Superset, Metabase, notebooks, or custom applications. Version everything in Git, test metric changes in CI, and use pre-aggregations or warehouse materializations for performance. This stack gives a fully open, portable metrics store.
 
 ## How to Contribute
 1. Fork the repo.
@@ -100,9 +100,9 @@ Star the repo if you find it useful!
 
 ## Disclaimer
 - This is a **community-curated** list — not exhaustive and not an endorsement.
-- Enterprise merchandising systems handle complex hierarchies, financials, and multi-channel inventory. Open-source tools excel at inventory, PIM, and lighter planning but typically require significant customization and integration to approach the breadth of Oracle, SAP, or Blue Yonder suites.
-- Always validate data accuracy, audit trails, and integration reliability before relying on any system for buying or allocation decisions.
+- A metrics store is only as trustworthy as its definitions, tests, and ownership. Open-source tools provide excellent transparency and control but still require strong data governance, access controls, and documentation practices.
+- Always validate critical business metrics against source systems and establish clear ownership before treating any layer as the single source of truth.
 
 ---
-**Made for retail merchandisers, category managers, inventory planners, and open-source retail technologists.**
-Let's make merchandise planning and assortment decisions more transparent, data-driven, and accessible.
+**Made for analytics engineers, data platform teams, and organizations that want consistent, governed metrics.**
+Let's make the semantic layer open, portable, and owned by the teams who use it.
